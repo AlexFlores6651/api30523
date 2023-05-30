@@ -15,6 +15,11 @@ const data = [
     // Agrega más datos si es necesario
   ];
 
+app.get('/', (req, res) => {
+  res.send('API funcionando correctamente!');
+  res.json(data);
+})
+
   app.get('/api/datos', (req, res) => {
     res.json(data);
   });
