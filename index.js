@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
     res.json(data);
   });
 
+app.use((req, res) => {
+    res.status(404).send('No se encontro tu pagina, que tiste')
+})
+
 app.listen(port, () => {
   console.log(`API listening at http://localhost:${port}`);
 });
